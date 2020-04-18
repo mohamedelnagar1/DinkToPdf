@@ -1,13 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Company />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>This library has the code of the original DinkToPdf with packages upgrade.</Description>
+    <Description>.NET Core P/Invoke wrapper for wkhtmltopdf library that uses Webkit engine to convert HTML pages to PDF.
+Updated version of original DinkToPdf by rdvojmoc.
+Updates:
+- .NET Standard 3.1
+- libwkhtmltox 0.12.5</Description>
+    <PackageId>ME.DinkToPdf</PackageId>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
